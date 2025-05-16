@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil - Site Glass Effect</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            height: 100vh;
+            display: flex;
+            background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* MENU LATERAL GAUCHE AVEC GLASS EFFECT */
+        nav {
+            width: 220px;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
+            padding-top: 30px;
+        }
+
+            nav a {
+                display: block;
+                color: white;
+                text-decoration: none;
+                padding: 15px 20px;
+                font-weight: bold;
+                transition: background 0.3s;
+            }
+
+                nav a:hover {
+                    background: rgba(255, 255, 255, 0.2);
+                }
+
+        /* CONTENU PRINCIPAL */
+        main {
+            flex-grow: 1;
+            padding: 50px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        /* Pour lisibilité sur fond flouté */
+        .glass-box {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu gauche -->
+    <nav>
+        <a href="page de garde.html">Page de garde</a>
+        <a href="formulaire d'inscription.html">Étudiants</a>
+        <a href="Tableau.html">Tableau</a>
+        <a href="contact.html">Contact</a>
+        <a href="monsite.html">Acceuil</a>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main>
+        <div class="glass-box">
+            <h1>Bienvenue sur le site</h1>
+            <p>Ceci est la page d'accueil avec un menu en verre (glass effect).</p>
+        </div>
+    </main>
+
+</body>
+</html>

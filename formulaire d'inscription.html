@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire d'inscription étudiant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f0f8ff;
+        }
+
+        fieldset {
+            border: 2px solid #007bff;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        label {
+            display: inline-block;
+            width: 120px;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"], input[type="date"], input[type="email"], input[type="tel"] {
+            width: 200px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .section {
+            display: flex;
+            justify-content: space-between;
+            max-width: 600px;
+            flex-wrap: wrap;
+        }
+
+            .section div {
+                flex: 1 1 250px;
+            }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            font-weight: bold;
+        }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+
+    <h1>Formulaire HTML - Enregistrement des étudiants</h1>
+
+    <form>
+        <!-- État civil -->
+        <fieldset>
+            <legend>État Civil</legend>
+            <div class="section">
+                <div>
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom"><br>
+
+                    <label for="date_naiss">Date de N. :</label>
+                    <input type="date" id="date_naiss" name="date_naiss"><br>
+
+                    <label for="sexe">Sexe :</label>
+                    <select id="sexe" name="sexe">
+                        <option value="">--Choisir--</option>
+                        <option value="homme">Homme</option>
+                        <option value="femme">Femme</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" id="prenom" name="prenom"><br>
+
+                    <label for="mail">Mail :</label>
+                    <input type="email" id="mail" name="mail"><br>
+
+                    <label for="contact">Contact :</label>
+                    <input type="tel" id="contact" name="contact">
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Diplômes -->
+        <fieldset>
+            <legend>Diplômes</legend>
+            <input type="checkbox" id="cep" name="diplome" value="CEP">
+            <label for="cep">CEP</label>
+
+            <input type="checkbox" id="bepc" name="diplome" value="BEPC">
+            <label for="bepc">BEPC</label>
+
+            <input type="checkbox" id="bac" name="diplome" value="BAC">
+            <label for="bac">BAC</label>
+        </fieldset>
+
+        <!-- Adresse -->
+        <fieldset>
+            <legend>Votre adresse</legend>
+            <label>Pays :</label><br>
+            <input type="radio" id="benin" name="pays" value="Benin">
+            <label for="benin">Bénin</label>
+
+            <input type="radio" id="senegal" name="pays" value="Senegal">
+            <label for="senegal">Sénégal</label>
+
+            <input type="radio" id="france" name="pays" value="France">
+            <label for="france">France</label>
+        </fieldset>
+
+        <!-- Boutons -->
+        <div class="buttons">
+            <button type="submit">Envoyer</button>
+            <button type="reset">Effacer</button>
+            <button type="button" onclick="window.close()">Quitter</button>
+        </div>
+    </form>
+
+</body>
+</html>
